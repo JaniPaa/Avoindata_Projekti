@@ -2,7 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00c86fdf-7794-4db5-9a2e-464e279680b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Testaus.html" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/Koulutyöt2020/Testijuttuja/Testitt.html" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/Koulutyöt2020/jsonTeht1/Tekijättauluun.html" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/Koulutyöt2020/jsonTeht1/json_teht.html" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/Koulutyöt2020/jsonTeht1/jsontesti.html" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/Koulutyöt2020/jsonTeht1/tyontekijat.json" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/Koulutyöt2020/nodejsjuttuja/server.js" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/css/building.css" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/12 Introduction to PHP/TYU.php" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/13 Security/testi.php" afterDir="false" />
+      <change afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/mysql-test/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/John Doe.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/John Doe.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/commodore64.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/commodore64.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/comparison.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/comparison.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/computers80.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/computers80.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/test.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/03 HTML5/test.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/box_assignment.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/box_assignment.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/boxmodel.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/boxmodel.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/columns.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/columns.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/comparisoncss.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/comparisoncss.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/box_assignment.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/box_assignment.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/boxstyles.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/boxstyles.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/columnstyles.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/columnstyles.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/comparison.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/comparison.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/floatstyles.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/floatstyles.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/selectors.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/selectors.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/simple.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/simple.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/targetstyles.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/css/targetstyles.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/csstest.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/csstest.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/floating.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/floating.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/game.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/game.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/selectors.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/04 CSS3 and Bootstrap/selectors.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/05 HTML5 forms/SampleForm.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/05 HTML5 forms/SampleForm.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/05 HTML5 forms/form.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/05 HTML5 forms/form.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/05 HTML5 forms/form_skel.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/05 HTML5 forms/form_skel.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/basic_math.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/basic_math.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/conditionals_booleans.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/conditionals_booleans.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/css/styles.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/css/styles.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/js/contact.js" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/js/contact.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/js/notes.js" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/js/notes.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/js/shopping.js" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/06 JavaScript Tools/js/shopping.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/css/form.css" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/css/form.css" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/function_returns_object.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/function_returns_object.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/js/tasks.js" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/js/tasks.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/object_methods.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/object_methods.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/simple_function.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/07 JavaScript Language/simple_function.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/08 JSON and AJAX/ajax_basic.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/08 JSON and AJAX/ajax_basic.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/building_lists.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/building_lists.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/js/building_lists.js" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/js/building_lists.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/js/lecture_notes.js" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/js/lecture_notes.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/js/simple_dom.js" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/js/simple_dom.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/lecture_notes.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/lecture_notes.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/simple_dom.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/09 Single-Page Applications/simple_dom.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/10 JavaScript Modules/README.md" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/10 JavaScript Modules/README.md" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/10 JavaScript Modules/function_closure.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/10 JavaScript Modules/function_closure.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/10 JavaScript Modules/js_classes.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/10 JavaScript Modules/js_classes.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/12 Introduction to PHP/order.html" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/12 Introduction to PHP/order.html" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/12 Introduction to PHP/php/gethint.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/12 Introduction to PHP/php/gethint.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/12 Introduction to PHP/php/serverTime.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/12 Introduction to PHP/php/serverTime.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/14 Modular PHP/diceclasses.inc.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Koulu 2018/Php_projects/labs/14 Modular PHP/diceclasses.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Avoindata_Projekti.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Avoindata_Projekti.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,29 +77,53 @@
     <session id="95623100">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
+          <entry key="html" value="2" />
+          <entry key="js" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="2" />
+          <entry key="JavaScript" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="138" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="138" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Testaus.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -47,6 +134,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -57,6 +145,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Testaus.html" />
+        <option value="$USER_HOME$/Desktop/Koulu 2018/Php_projects/mysql-test/app.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -66,12 +156,21 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="342" />
+    <option name="y" value="251" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -87,6 +186,15 @@
               <item name="Avoindata_Projekti" type="b2602c69:ProjectViewProjectNode" />
               <item name="Avoindata_Projekti" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Avoindata_Projekti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Php_projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Avoindata_Projekti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Php_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql-test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -96,6 +204,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Koulu 2018/Php_projects" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -111,6 +220,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$USER_HOME$/Desktop/Koulu 2018/Php_projects/mysql-test">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -121,36 +240,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569828517750</updated>
-      <workItem from="1569828518984" duration="25000" />
+      <workItem from="1569828518984" duration="154000" />
+      <workItem from="1569828709673" duration="2338000" />
+      <workItem from="1569831090377" duration="239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25000" />
+    <option name="totallyTimeSpent" value="2731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,10 +281,32 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Desktop/Koulu 2018/Php_projects/Koulutyöt2020/nodejsjuttuja/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Koulu 2018/Php_projects/Koulutyöt2020/Testijuttuja/Testitt.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Testaus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Koulu 2018/Php_projects/mysql-test/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>

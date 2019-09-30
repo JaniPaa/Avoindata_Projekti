@@ -1,0 +1,23 @@
+{
+  "name": "Avoindata_Projekti",
+  "version": "1.0.0",
+  "description": "Ohjelma joka hakee tapahtumia Helsingistä paikan avulla.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaniPaa/Avoindata_Projekti.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaniPaa/Avoindata_Projekti/issues"
+  },
+  "homepage": "https://github.com/JaniPaa/Avoindata_Projekti#readme",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
