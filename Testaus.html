@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    table,th,td {
+        border : 1px solid black;
+        border-collapse: collapse;
+    }
+    th,td {
+        padding: 5px;
+    }
+</style>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<form>
+    Löytää tietokannasta dataa nimellä: Testiuser <br>
+    <input type="text" name="ebinjuttu" value="" id="ebinjuttu">
+</form>
+<button onclick="showCustomer(document.getElementById('ebinjuttu').value)">Nappula</button>
 
+<br>
+<div id="txtHint">Tähän tulee userin data</div>
 </body>
+<script src="app.js"></script>
 </html>

@@ -1,14 +1,15 @@
-const mysql = require('mysql');
-const con = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'testidatabase'
-});
-
-con.query('SELECT * FROM employees', (err,rows) => {
-    if(err) throw err;
-
-    console.log('Data received from Db:\n');
-    console.log(rows);
-});
+function showCustomer(str) {
+    var xhttp;
+    if (str === "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    }
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("txtHint").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "getUser.php?q="+str, true);
+    xhttp.send();
+}
