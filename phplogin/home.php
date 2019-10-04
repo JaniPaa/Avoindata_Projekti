@@ -33,12 +33,36 @@ if (!isset($_SESSION['loggedin'])) {
     <h2>Home Page</h2>
     <p>Welcome back, <?=$_SESSION['name']?>!</p>
 </div>
-<div id="getJobs">
+<div id="getUserCity">
     <form action="getCity.php" method="post">
         <input type="text" name="username" placeholder="Username" id="username" required>
         <input type="submit" value="getCity">
     </form>
     <div id="txtHint">Tähän tulee userin kaupunki</div>
 </div>
+<div id="getJobs"></div>
+
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    var url = "tyontekijat.json"; // 2
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var myArr = JSON.parse(xmlhttp.responseText);
+            myFunction(myArr.tyontekijat); // 3
+        }
+    }
+    xmlhttp.open("GET", url, true); // 4
+    xmlhttp.send();
+    function myFunction(arr) { // 5
+        var out = "";
+        var i;
+        for(i = 0; i < arr.length; i++) {
+            out += arr[i].firstName + " " +
+                arr[i].lastName + '<br>';
+        }
+        document.getElementById("duunarit").innerHTML = out; // 6
+    }
+</script>
+
 </body>
 </html>

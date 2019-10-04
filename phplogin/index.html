@@ -8,14 +8,16 @@
 <body>
 <div class="login">
     <h1>Login</h1>
+    <nav class="navtop">
+        <div>
+            <a href="register.php"><i class="fas fa-user-circle"></i>Register</a>
+        </div>
+    </nav>
+
     <form action="authenticate.php" method="post">
-        <label for="username">
-            <i class="fas fa-user"></i>
-        </label>
+        <label for="username"></label>
         <input type="text" name="username" placeholder="Username" id="username" required>
-        <label for="password">
-            <i class="fas fa-lock"></i>
-        </label>
+        <label for="password"></label>
         <input type="password" name="password" placeholder="Password" id="password" required>
         <input type="submit" value="Login">
     </form>
