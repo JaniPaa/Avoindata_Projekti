@@ -1,4 +1,5 @@
 function showCustomer(str) {
+    alert('täällä');
     var xhttp;
     if (str === "") {
         document.getElementById("txtHint").innerHTML = "";
@@ -10,6 +11,6 @@ function showCustomer(str) {
             document.getElementById("txtHint").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "getUser.php?q="+str, true);
+    xhttp.open("GET", "getCity.php?q="+str, true);
     xhttp.send();
 }
