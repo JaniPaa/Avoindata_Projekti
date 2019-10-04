@@ -8,6 +8,7 @@
 
 session_start();
 
+// kommentoi alla oleva if lause pois jos haluat avata selaimeen suoraan tämän sivun.
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html'); // Jos käyttäjä ei ole kirjautunut sisään. hänet heitetään takaisin kirjautumissivulle.
     exit();

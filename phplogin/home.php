@@ -8,11 +8,11 @@
 
 session_start();
 
+// kommentoi alla oleva if lause pois jos haluat avata selaimeen suoraan tämän sivun.
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html'); // jos käyttäjä ei ole kirjautunut, hänet ohjataan kirjautumissivulle.
 	exit();
 }
-
 
 ?>
 <!DOCTYPE html>
