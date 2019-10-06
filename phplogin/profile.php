@@ -10,7 +10,7 @@ session_start();
 
 // kommentoi alla oleva if lause pois jos haluat avata selaimeen suoraan tämän sivun.
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: index.html'); // Jos käyttäjä ei ole kirjautunut sisään. hänet heitetään takaisin kirjautumissivulle.
+    header('Location: index.html'); // Jos käyttäjä ei ole kirjautunut sisään. Hänet heitetään takaisin kirjautumissivulle.
     exit();
 }
 $DATABASE_HOST = 'localhost';
@@ -40,12 +40,12 @@ $stmt->close();
 <body class="loggedin">
 <nav class="navtop">
     <div>
-        <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        <a href="profile.php">Profile</a>
+        <a href="logout.php">Logout</a>
     </div>
 </nav>
 <div class="content">
-    <h2>Profile Page</h2>
+    <h1>Profile Page</h1>
     <div>
         <p>Your account details are below:</p>
         <table>
@@ -54,7 +54,7 @@ $stmt->close();
                 <td><?=$_SESSION['name']?></td>
             </tr>
             <tr>
-                <td>Your city</td>
+                <td>Your suburb:</td>
                 <td><?=$city?></td>
             </tr>
         </table>

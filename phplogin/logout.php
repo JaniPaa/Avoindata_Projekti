@@ -7,7 +7,7 @@
  */
 
 session_start();
-session_destroy(); // Kun käyttäjä painaa logout näppäintä sessio sulkeutuu ja hänet ohjataan kirjautumissivulle.
+session_destroy();
 
-header('Location: index.html');
+header('Location: index.html'); // Kun käyttäjä painaa logout näppäintä sessio sulkeutuu ja hänet ohjataan kirjautumissivulle.
 ?>

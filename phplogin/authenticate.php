@@ -24,7 +24,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
     die ('Täytäthän username ja password kentät!');
 }
 
-// Haetaan käyttäjän usernamella id ja salasana.
+// Haetaan käyttäjän usernamella hänen id ja salasana.
 if ($stmt = $con->prepare('SELECT id, password FROM userstable WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $_POST['username']);
