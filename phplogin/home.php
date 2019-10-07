@@ -103,13 +103,13 @@ $stmt->close();
             if(jsonJobData.data[i].description != null){
                 td3.innerHTML = jsonJobData.data[i].description.fi;
             }else{
-                td3.innerHTML = "-";
+                td3.innerHTML = "Ei tietoja saatavilla.";
             }
             var td4 = document.createElement('td');
             if(jsonJobData.data[i].email != null){
                 td4.innerHTML = jsonJobData.data[i].email;
             }else{
-                td4.innerHTML = "-";
+                td4.innerHTML = "Ei tietoja saatavilla.";
             }
 
             tr.append(td, td2, td3, td4);
@@ -157,13 +157,13 @@ $stmt->close();
             if(jsonEvents.data[i].description != null){
                 td3.innerHTML = jsonEvents.data[i].description.fi;
             }else{
-                td3.innerHTML = "-";
+                td3.innerHTML = "Ei tietoja saatavilla.";
             }
             var td4 = document.createElement('td');
             if(jsonEvents.data[i].email != null){
                 td4.innerHTML = jsonEvents.data[i].email;
             }else{
-                td4.innerHTML = "-";
+                td4.innerHTML = "Ei tietoja saatavilla.";
             }
 
             tr.append(td, td2, td3, td4);

@@ -6,19 +6,20 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="login">
-    <h1>Login</h1>
-    <nav class="navtop">
-        <div>
-            <a href="register.php">Register</a>
-        </div>
-    </nav>
+<div class="navigointi">
+    <nav>
+        <h1>Eventtinaattori</h1>
 
-    <form action="authenticate.php" method="post">
+    </nav>
+</div>
+<div class="login">
+    <form action="authenticate.php" method="post" class="formarea">
+        <a href="register.php" id="registerlink">Register</a>
+        <h1>Login</h1>
         <label for="username"></label>
-        <input type="text" name="username" placeholder="Username" id="username" required>
+        <input type="text" name="username" placeholder="Username" id="username" required class="clickdform">
         <label for="password"></label>
-        <input type="password" name="password" placeholder="Password" id="password" required>
+        <input type="password" name="password" placeholder="Password" id="password" required class="clickdform">
         <input type="submit" value="Login">
     </form>
 </div>
