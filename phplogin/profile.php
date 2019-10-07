@@ -42,6 +42,7 @@ $stmt->close();
     <div>
         <a href="profile.php">Profile</a>
         <a href="logout.php">Logout</a>
+        <a href="home.php">Home</a>
     </div>
 </nav>
 <div class="content">

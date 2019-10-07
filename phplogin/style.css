@@ -2,6 +2,7 @@ table th, td {
     border: white 1px solid;
     color: white;
     font-weight: bold;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 body{
     background-color: #33495e;
@@ -12,12 +13,14 @@ body{
     padding-left: 870px;
     background-color: black;
 }
+a{
+    color: white;
+}
 #registerlink{
     position: absolute;
     right: 30px;
     border: 2px solid white;
     padding: 10px;
-    color: white;
 }
 h1{
     color: white;
