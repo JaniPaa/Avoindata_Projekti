@@ -45,10 +45,12 @@ $stmt->close();
 </nav>
 <div class="content">
     <h2>Home Page</h2>
-    <p>Welcome, <?=$_SESSION['name']?>!</p>
+    <p><strong>Welcome, <?=$_SESSION['name']?>!</strong></p>
+    <p>You can search events happening inside Helsinki with your home Helsinki suburb by pressing "Get events with home suburb" button,
+        <br> or by inserting one into the suburb textfield and pressing "Get Events" button. This may take few clicks!</p>
 </div>
 <div id="getUserCity">
-    <div id="txtHint">Your suburb: <?=$city?></div>
+    <div id="txtHint"><strong>Your suburb: <?=$city?></strong></div>
 </div>
 <div id="getEvents">
     <table id="eventsTable"></table>
@@ -119,7 +121,8 @@ $stmt->close();
 
     function getEventsViaText(){
         var suburb = document.getElementById('suburb').value;
-        console.log(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`);
+        //console.log(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`);
+
         fetch(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`)
             .then(function(resp) { return resp.json() }) // Convert data to json
             .then(function(data) {

@@ -9,5 +9,5 @@
 session_start();
 session_destroy();
 
-header('Location: index.html'); // Kun käyttäjä painaa logout näppäintä sessio sulkeutuu ja hänet ohjataan kirjautumissivulle.
+echo "<script>alert('You are logged out.'); window.location.href='index.html';</script>"; // Kun käyttäjä painaa logout näppäintä sessio sulkeutuu ja hänet ohjataan kirjautumissivulle.
 ?>

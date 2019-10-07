@@ -25,12 +25,21 @@ $city = mysqli_real_escape_string($con, $_POST['city']);
 // Tarkistetaan onko käyttäjä antanut tyhjiä arvoja.
 if (empty($username)) {
     array_push($errors, "Username is required");
+    echo '<script language="javascript">';
+    echo 'alert("Username is required")';
+    echo '</script>';
 }
 if (empty($password1)) {
     array_push($errors, "Password is required");
+    echo '<script language="javascript">';
+    echo 'alert("Password is required")';
+    echo '</script>';
 }
 if ($password1 != $password2) {
     array_push($errors, "The two passwords do not match");
+    echo '<script language="javascript">';
+    echo 'alert("The two passwords do not match")';
+    echo '</script>';
 }
 
 $user_check_query = "SELECT * FROM userstable WHERE username='$username'";
@@ -41,15 +50,17 @@ $user = mysqli_fetch_assoc($result);
 if ($user) {
     if ($user['username'] === $username) {
         array_push($errors, "Username already exists");
+        echo '<script language="javascript">';
+        echo 'alert("Username already exists")';
+        echo '</script>';
     }
 }
     if (count($errors) == 0) { //jos ei löydy virheitä niin lähetetään tietokantaan käyttäjän data.
-
         $query = "INSERT INTO userstable (username, password, city) 
   			  VALUES('$username', '$password1', '$city')";
         mysqli_query($con, $query);
         $_SESSION['username'] = $username;
-        header('location: index.html');
+        echo "<script>alert('Registration successful!'); window.location.href='index.html';</script>";
     }
 }
 
@@ -62,7 +73,8 @@ if ($user) {
     <input type="password" name="password1" placeholder="Password" id="password" required><br>
     <label for="password2">Repeat password:</label>
     <input type="password" name="password2" placeholder="Repeat password" id="password2" required><br>
-    <label for="city">City</label>
-    <input type="text" name="city" placeholder="City" id="city" ><br>
+    <label for="city">Your home suburb:</label>
+    <input type="text" name="city" placeholder="Suburb" id="city" ><br>
     <input type="submit" value="Register" name="registerUser">
 </form>
+
