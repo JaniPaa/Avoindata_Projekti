@@ -28,6 +28,32 @@ $stmt->execute();
 $stmt->bind_result($city);
 $stmt->fetch();
 $stmt->close();
+
+if (isset($_POST['changeDetails'])) {
+// Formeista haetut käyttäjä datat.
+$changedCity = mysqli_real_escape_string($con, $_POST['changedCity']);
+
+if (empty($changedCity)) {
+    echo '<script language="javascript">';
+    echo 'alert("City is required")';
+    echo '</script>';
+    $errorVariable = true;
+}
+
+$id = $_SESSION['id'];
+$user_check_query = "SELECT * FROM userstable WHERE id='$id'";
+$result = mysqli_query($con, $user_check_query);
+$user = mysqli_fetch_assoc($result);
+
+if(!$errorVariable){
+    $query = "UPDATE userstable SET city='$changedCity' WHERE id='$id'";
+    mysqli_query($con, $query);
+    echo "<script>alert('Change successful!'); window.location.href='profile.php';</script>";
+}
+
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -36,19 +62,27 @@ $stmt->close();
     <meta charset="utf-8">
     <title>Profile Page</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
-<body class="loggedin">
-<nav class="navtop">
-    <div>
-        <a href="profile.php">Profile</a>
-        <a href="logout.php">Logout</a>
-        <a href="home.php">Home</a>
+<body class="profile-body">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Grand Tourism-o</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="profile.php" class="nabi">Profile</a></li>
+            <li><a href="home.php" class="nabi">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
     </div>
 </nav>
 <div class="content">
-    <h1>Profile Page</h1>
-    <div>
-        <p>Your account details are below:</p>
+
+    <div class="profileDetails">
+        <p>Your account details:</p>
         <table>
             <tr>
                 <td>Username:</td>
@@ -59,6 +93,14 @@ $stmt->close();
                 <td><?=$city?></td>
             </tr>
         </table>
+    </div>
+    <div class="changeUserDetails">
+        <form action="profile.php" method="post" class="formarea">
+            <h1 id="profileChangeHeader">Change your home suburb</h1>
+            <label for="city"></label>
+            <input type="text" name="changedCity" placeholder="New suburb" required id="changeCity"><br>
+            <input type="submit" value="Change suburb" name="changeDetails" id="changeBtn">
+        </form>
     </div>
 </div>
 </body>

@@ -35,31 +35,41 @@ $stmt->close();
     <meta charset="utf-8">
     <title>Home Page</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
-<body class="loggedin">
-<nav class="navtop">
-    <div>
-        <a href="profile.php">Profile</a>
-        <a href="logout.php">Logout</a>
+<body class="home-body">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Grand Tourism-o</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="home.php" class="nabi">Home</a></li>
+            <li><a href="profile.php" class="nabi">Profile</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
     </div>
 </nav>
-<div class="content">
+<div class="home-content">
     <h2>Home Page</h2>
     <p><strong>Welcome, <?=$_SESSION['name']?>!</strong></p>
     <p>You can search events happening inside Helsinki with your home Helsinki suburb by pressing "Get events with home suburb" button,
-        <br> or by inserting one into the suburb textfield and pressing "Get Events" button. This may take few clicks!</p>
+        <br> or by inserting one into the Search textfield and pressing "Get events" button. Alternatively you can search events with keywords like "koulu" or "taide".<br>
+        This may take few clicks!
 </div>
 <div id="getUserCity">
     <div id="txtHint"><strong>Your suburb: <?=$city?></strong></div>
 </div>
 <div id="getEvents">
     <table id="eventsTable"></table>
-    <button onclick="createEventTable(jsonJobData)">Get events with home suburb</button>
-    <table id="eventsTable2"></table>
+    <button onclick="createEventTable(jsonJobData)" id="suburbEventBtn">Get events with home suburb</button>
     <form>
-        <input type="text" name="username" placeholder="Suburb" id="suburb" required>
+        <input type="text" name="username" placeholder="Search" id="suburbTextArea" required>
     </form>
-    <button id="textEventButton" onclick="getEventsViaText()">Get Events</button>
+    <button id="textEventButton" onclick="getEventsViaText()">Get events</button>
+    <table id="eventsTable2"></table>
 </div>
 
 <script>
@@ -105,13 +115,13 @@ $stmt->close();
             if(jsonJobData.data[i].description != null){
                 td3.innerHTML = jsonJobData.data[i].description.fi;
             }else{
-                td3.innerHTML = "Ei tietoja saatavilla.";
+                td3.innerHTML = "No information available.";
             }
             var td4 = document.createElement('td');
             if(jsonJobData.data[i].email != null){
                 td4.innerHTML = jsonJobData.data[i].email;
             }else{
-                td4.innerHTML = "Ei tietoja saatavilla.";
+                td4.innerHTML = "No information available.";
             }
 
             tr.append(td, td2, td3, td4);
@@ -120,8 +130,8 @@ $stmt->close();
     }
 
     function getEventsViaText(){
-        var suburb = document.getElementById('suburb').value;
-        //console.log(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`);
+        var suburb = document.getElementById('suburbTextArea').value;
+        //console.log(`http://api.hel.fi/linkedevents/v1/place/?division=${suburb}`);
 
         fetch(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`)
             .then(function(resp) { return resp.json() }) // Convert data to json
@@ -160,13 +170,13 @@ $stmt->close();
             if(jsonEvents.data[i].description != null){
                 td3.innerHTML = jsonEvents.data[i].description.fi;
             }else{
-                td3.innerHTML = "Ei tietoja saatavilla.";
+                td3.innerHTML = "No information available.";
             }
             var td4 = document.createElement('td');
             if(jsonEvents.data[i].email != null){
                 td4.innerHTML = jsonEvents.data[i].email;
             }else{
-                td4.innerHTML = "Ei tietoja saatavilla.";
+                td4.innerHTML = "No information available.";
             }
 
             tr.append(td, td2, td3, td4);

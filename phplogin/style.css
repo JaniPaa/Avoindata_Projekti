@@ -1,11 +1,11 @@
 table th, td {
-    border: white 1px solid;
+    border: black 1px solid;
     color: white;
     font-weight: bold;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
-body{
-    background-color: #33495e;
+.home-body, .register-body, .profile-body, .login-body{
+    background-color: grey;
 }
 .navigointi{
     padding-top: 10px;
@@ -16,28 +16,24 @@ body{
 a{
     color: white;
 }
-#registerlink{
-    position: absolute;
-    right: 30px;
-    border: 2px solid white;
-    padding: 10px;
-}
 h1{
     color: white;
 }
-
+#loginH1{
+    color: white;
+}
 .formarea{
-    width: 300px;
+    width: 400px;
     transform: translate(50%,50%);
     padding: 40px;
     left: 30%;
     text-align: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.8);
     position: absolute;
 }
 .clickdform{
     text-align: center;
-    margin: 20px auto;
+    margin: 10px auto;
     display: block;
     background: none;
     border: 2px solid white;
@@ -52,3 +48,134 @@ h1{
     width: 280px;
     border-color: green;
 }
+
+.profileDetails{
+    left: 47%;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    position: absolute;
+}
+#profileChangeHeader{
+    color: white;
+}
+#profileHeader{
+    left: 45%;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    float: left;
+}
+.testi{
+    width: 400px;
+    transform: translate(50%,50%);
+    padding: 40px;
+    left: 30%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+}
+#registerH1{
+    color: white;
+}
+.registerLabel{
+    color: white;
+}
+#changeCity{
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+    background: none;
+    border: 2px solid white;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+}
+#changeCity:focus{
+    width: 280px;
+    border-color: green;
+}
+.home-content{
+    margin-left: 20px;
+}
+#getUserCity{
+    margin-left: 20px;
+}
+#getEvents{
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    width: 70%;
+}
+#suburbEventBtn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+#suburbEventBtn:hover{
+    background-color: green;
+    color: white;
+}
+#textEventButton{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+#textEventButton:hover{
+    background-color: green;
+    color: white;
+}
+button, input[type=submit] {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#changeBtn{
+    margin-top: 15px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+#changeBtn:hover{
+    background-color: green;
+    color: white;
+}
+#loginBtn{
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+#loginBtn:hover{
+    background-color: green;
+    color: white;
+}
+#submitBtn{
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+#submitBtn:hover{
+    background-color: green;
+    color: white;
+}
+#suburbTextArea{
+    width: 12%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 10px 12px 10px;
+}
+

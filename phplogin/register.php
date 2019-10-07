@@ -48,7 +48,7 @@ $user = mysqli_fetch_assoc($result);
 
 //Tarkistetaan löytyykö tietokannasta jo kyseinen käyttäjä nimi.
 if ($user) {
-    if ($user['username'] === $username) {
+    if ($user['username'] == $username) {
         array_push($errors, "Username already exists");
         echo '<script language="javascript">';
         echo 'alert("Username already exists")';
@@ -65,16 +65,37 @@ if ($user) {
 }
 
 ?>
-<h1>Register</h1>
-<form action="register.php" method="post">
-    <label for="username">Username:</label>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body class="register-body">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Eventtinaattori</a>
+        </div>
+        <ul class="nav navbar-nav"></ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
+<form action="register.php" method="post" class="testi">
+    <h1 id="registerH1">Register</h1>
+    <label for="username" class="registerLabel">Username:</label><br>
     <input type="text" name="username" placeholder="Username" id="username" required><br>
-    <label for="password">Password:</label>
+    <label for="password"class="registerLabel">Password:</label><br>
     <input type="password" name="password1" placeholder="Password" id="password" required><br>
-    <label for="password2">Repeat password:</label>
+    <label for="password2"class="registerLabel">Repeat password:</label><br>
     <input type="password" name="password2" placeholder="Repeat password" id="password2" required><br>
-    <label for="city">Your home suburb:</label>
+    <label for="city"class="registerLabel">Your home suburb:</label><br>
     <input type="text" name="city" placeholder="Suburb" id="city" ><br>
-    <input type="submit" value="Register" name="registerUser">
+    <input type="submit" value="Register" name="registerUser" id="submitBtn">
 </form>
-
+</body>
+</html>
