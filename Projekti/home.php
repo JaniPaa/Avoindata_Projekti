@@ -38,29 +38,34 @@ $stmt->close();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body class="home-body">
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top" id="mNavbar">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Grand Tourism-o</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="home.php" class="nabi">Home</a></li>
             <li><a href="profile.php" class="nabi">Profile</a></li>
+            <li class="active"><a href="home.php" class="nabi">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?=$_SESSION['name']?></a></li>
             <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
+        <div class="col-sm-3 col-md-3 pull-right">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="searchArea">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit" onclick="getEventsViaText()"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
     </div>
 </nav>
 <div class="home-content">
-    <h2>Home Page</h2>
-    <p><strong>Welcome, <?=$_SESSION['name']?>!</strong></p>
+    <h2>Home Pae</h2>
     <p>You can search events happening inside Helsinki with your home Helsinki suburb by pressing "Get events with home suburb" button,
-        <br> or by inserting one into the Search textfield and pressing "Get events" button. Alternatively you can search events with keywords like "koulu" or "taide".<br>
+        <br> or by inserting one into the Search text field and clicking magnifying glass icon. Alternatively you can search events with keywords like "koulu" or "taide".<br>
         This may take few clicks!
-</div>
-<div id="getUserCity">
-    <div id="txtHint"><strong>Your suburb: <?=$city?></strong></div>
 </div>
 <div id="getEvents">
     <table id="eventsTable"></table>
@@ -90,17 +95,22 @@ $stmt->close();
 
     function createEventTable(jsonJobData){
         document.getElementById('eventsTable').innerHTML = "";
-        var table = document.getElementById('eventsTable');
+        var table = document.getElementById('eventsTable').createCaption();
+        table.innerHTML = "Searched with: "+ phpCity;
         var trHeader = document.createElement('tr');
         var th1 = document.createElement('th');
         th1.innerHTML = 'Name';
         var th2 = document.createElement('th');
-        th2.innerHTML = 'Info url';
+        th2.innerHTML = 'Phonenumber';
         var th3 = document.createElement('th');
         th3.innerHTML = 'Description';
         var th4 = document.createElement('th');
         th4.innerHTML = 'Email';
-        trHeader.append(th1, th2, th3, th4);
+        var th5 = document.createElement('th');
+        th5.innerHTML = 'Street Address';
+        var th6 = document.createElement('th');
+        th6.innerHTML = 'Site url';
+        trHeader.append(th1, th2, th3, th4, th5, th6);
         table.appendChild(trHeader);
 
         var i;
@@ -110,7 +120,7 @@ $stmt->close();
             var td = document.createElement('td');
             td.innerHTML = jsonJobData.data[i].name.fi;
             var td2 = document.createElement('td');
-            td2.innerHTML = '<a href="'+jsonJobData.data[i].info_url.fi+'">'+jsonJobData.data[i].info_url.fi+'</a>';
+            td2.innerHTML = jsonJobData.data[i].telephone.fi;
             var td3 = document.createElement('td');
             if(jsonJobData.data[i].description != null){
                 td3.innerHTML = jsonJobData.data[i].description.fi;
@@ -123,15 +133,20 @@ $stmt->close();
             }else{
                 td4.innerHTML = "No information available.";
             }
-
-            tr.append(td, td2, td3, td4);
+            var td5 = document.createElement('td');
+            td5.innerHTML = jsonJobData.data[i].street_address.fi;
+            var td6 = document.createElement('td');
+            td6.innerHTML = '<a href="'+jsonJobData.data[i].info_url.fi+'">'+jsonJobData.data[i].info_url.fi+'</a>';
+            var tdBtn1 = document.createElement('td');
+            tdBtn1.innerHTML = `<input type="button" style="color:black" onclick="getData(this)" value="Add to favourite"</input>`;
+            tr.append(td, td2, td3, td4, td5, td6, tdBtn1);
             table.appendChild(tr);
         }
     }
 
     function getEventsViaText(){
-        var suburb = document.getElementById('suburbTextArea').value;
-        //console.log(`http://api.hel.fi/linkedevents/v1/place/?division=${suburb}`);
+        var suburb = document.getElementById('searchArea').value;
+        console.log(`http://api.hel.fi/linkedevents/v1/place/?division=${suburb}`);
 
         fetch(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`)
             .then(function(resp) { return resp.json() }) // Convert data to json
@@ -150,12 +165,16 @@ $stmt->close();
         var th1 = document.createElement('th');
         th1.innerHTML = 'Name';
         var th2 = document.createElement('th');
-        th2.innerHTML = 'Info url';
+        th2.innerHTML = 'Phonenumber';
         var th3 = document.createElement('th');
         th3.innerHTML = 'Description';
         var th4 = document.createElement('th');
         th4.innerHTML = 'Email';
-        trHeader.append(th1, th2, th3, th4);
+        var th5 = document.createElement('th');
+        th5.innerHTML = 'Street Address';
+        var th6 = document.createElement('th');
+        th6.innerHTML = 'Site url';
+        trHeader.append(th1, th2, th3, th4, th5, th6);
         table.appendChild(trHeader);
 
         var i;
@@ -165,7 +184,7 @@ $stmt->close();
             var td = document.createElement('td');
             td.innerHTML = jsonEvents.data[i].name.fi;
             var td2 = document.createElement('td');
-            td2.innerHTML = '<a href="'+jsonEvents.data[i].info_url.fi+'">'+jsonEvents.data[i].info_url.fi+'</a>';
+            td2.innerHTML = jsonEvents.data[i].telephone.fi;
             var td3 = document.createElement('td');
             if(jsonEvents.data[i].description != null){
                 td3.innerHTML = jsonEvents.data[i].description.fi;
@@ -178,10 +197,22 @@ $stmt->close();
             }else{
                 td4.innerHTML = "No information available.";
             }
-
-            tr.append(td, td2, td3, td4);
+            var td5 = document.createElement('td');
+            td5.innerHTML = jsonEvents.data[i].street_address.fi;
+            var td6 = document.createElement('td');
+            td6.innerHTML = '<a href="'+jsonEvents.data[i].info_url.fi+'">'+jsonEvents.data[i].info_url.fi+'</a>';
+            var tdBtn2 = document.createElement('td');
+            tdBtn2.innerHTML = `<input type="button" style="color:black" onclick="getData(this)" value="Add to favourite"</input>`;
+            tr.append(td, td2, td3, td4, td5, td6, tdBtn2);
             table.appendChild(tr);
         }
+
+    }
+
+    function getData(x) {
+        alert('Details: ' + x.parentNode.parentNode.childNodes[0].innerHTML + ", " +x.parentNode.parentNode.childNodes[4].innerHTML +", "+x.parentNode.parentNode.childNodes[5].innerHTML + " added to favourites.");
+        var favorite = x.parentNode.parentNode.childNodes[0].innerHTML + ", " +x.parentNode.parentNode.childNodes[4].innerHTML +", url:"+x.parentNode.parentNode.childNodes[5].innerHTML;
+        window.location.href = "profile.php?favorite=" + favorite;
     }
 </script>
 

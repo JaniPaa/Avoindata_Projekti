@@ -1,11 +1,15 @@
-table th, td {
+table, th, td {
     border: black 1px solid;
     color: white;
     font-weight: bold;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    background-color: lightslategray;
 }
 .home-body, .register-body, .profile-body, .login-body{
     background-color: grey;
+}
+#eventsTable, #eventsTable2{
+
 }
 .navigointi{
     padding-top: 10px;
@@ -13,7 +17,10 @@ table th, td {
     padding-left: 870px;
     background-color: black;
 }
-a{
+#eventsTable2 a{
+    color: white;
+}
+#eventsTable a{
     color: white;
 }
 h1{
@@ -123,10 +130,12 @@ h1{
     background-color: white;
     color: black;
     border: 2px solid #555555;
+    display: none;
 }
 #textEventButton:hover{
     background-color: green;
     color: white;
+    display: none;
 }
 button, input[type=submit] {
     border: none;
@@ -177,5 +186,14 @@ button, input[type=submit] {
     border-radius: 4px;
     font-size: 16px;
     padding: 12px 10px 12px 10px;
+    display: none;
+}
+#searchBar{
+    width: 50%;
+    margin: 0 auto;
+}
+#buttonDiv{
+    width: 7%;
+    margin: 0 auto;
 }
 

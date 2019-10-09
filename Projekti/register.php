@@ -21,7 +21,7 @@ $username = mysqli_real_escape_string($con, $_POST['username']);
 $password1 = mysqli_real_escape_string($con, $_POST['password1']);
 $password2 = mysqli_real_escape_string($con, $_POST['password2']);
 $city = mysqli_real_escape_string($con, $_POST['city']);
-
+$favorite = "none";
 // Tarkistetaan onko käyttäjä antanut tyhjiä arvoja.
 if (empty($username)) {
     array_push($errors, "Username is required");
@@ -56,8 +56,8 @@ if ($user) {
     }
 }
     if (count($errors) == 0) { //jos ei löydy virheitä niin lähetetään tietokantaan käyttäjän data.
-        $query = "INSERT INTO userstable (username, password, city) 
-  			  VALUES('$username', '$password1', '$city')";
+        $query = "INSERT INTO userstable (username, password, city, favorite) 
+  			  VALUES('$username', '$password1', '$city', '$favorite')";
         mysqli_query($con, $query);
         $_SESSION['username'] = $username;
         echo "<script>alert('Registration successful!'); window.location.href='index.html';</script>";
@@ -93,7 +93,7 @@ if ($user) {
     <input type="password" name="password1" placeholder="Password" id="password" required><br>
     <label for="password2"class="registerLabel">Repeat password:</label><br>
     <input type="password" name="password2" placeholder="Repeat password" id="password2" required><br>
-    <label for="city"class="registerLabel">Your home suburb:</label><br>
+    <label for="city"class="registerLabel">Your home Helsinki suburb:</label><br>
     <input type="text" name="city" placeholder="Suburb" id="city" ><br>
     <input type="submit" value="Register" name="registerUser" id="submitBtn">
 </form>

@@ -22,17 +22,16 @@ if (mysqli_connect_errno()) {
     die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 // Haetaan käyttäjän id:llä hänen asettamaansa kaupunkia.
-$stmt = $con->prepare('SELECT city FROM userstable WHERE id = ?');
+$stmt = $con->prepare('SELECT city, favorite FROM userstable WHERE id = ?');
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($city);
+$stmt->bind_result($city, $favorite);
 $stmt->fetch();
 $stmt->close();
 
 if (isset($_POST['changeDetails'])) {
-// Formeista haetut käyttäjä datat.
 $changedCity = mysqli_real_escape_string($con, $_POST['changedCity']);
-
+$errorVariable = false;
 if (empty($changedCity)) {
     echo '<script language="javascript">';
     echo 'alert("City is required")';
@@ -53,7 +52,12 @@ if(!$errorVariable){
 
 }
 
-
+if (isset($_GET['favorite'])) {
+    $favorite = $_GET['favorite'];
+    $id = $_SESSION['id'];
+    $queryFavorite = "UPDATE userstable SET favorite='$favorite' WHERE id='$id'";
+    mysqli_query($con, $queryFavorite);
+}
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +72,7 @@ if(!$errorVariable){
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Grand Tourism-o</a>
+            <a class="navbar-brand" href="home.php">Grand Tourism-o</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="profile.php" class="nabi">Profile</a></li>
@@ -89,8 +93,12 @@ if(!$errorVariable){
                 <td><?=$_SESSION['name']?></td>
             </tr>
             <tr>
-                <td>Your suburb:</td>
+                <td>Suburb:</td>
                 <td><?=$city?></td>
+            </tr>
+            <tr>
+                <td>Favorite:</td>
+                <td><?=$favorite?></td>
             </tr>
         </table>
     </div>
