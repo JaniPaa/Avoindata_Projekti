@@ -57,7 +57,7 @@ h1{
 }
 
 .profileDetails{
-    left: 47%;
+    left: 40%;
     color: white;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     position: absolute;

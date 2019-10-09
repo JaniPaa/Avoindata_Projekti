@@ -48,7 +48,7 @@ $stmt->close();
             <li class="active"><a href="home.php" class="nabi">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?=$_SESSION['name']?></a></li>
+            <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> <?=$_SESSION['name']?></a></li>
             <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
         <div class="col-sm-3 col-md-3 pull-right">
@@ -64,7 +64,7 @@ $stmt->close();
 <div class="home-content">
     <h2>Home Pae</h2>
     <p>You can search events happening inside Helsinki with your home Helsinki suburb by pressing "Get events with home suburb" button,
-        <br> or by inserting one into the Search text field and clicking magnifying glass icon. Alternatively you can search events with keywords like "koulu" or "taide".<br>
+        <br> or by inserting one into the search text field and clicking magnifying glass icon. Alternatively you can search events with keywords like "koulu" or "taide".<br>
         This may take few clicks!
 </div>
 <div id="getEvents">
@@ -82,7 +82,7 @@ $stmt->close();
     var phpCity = "<?=$city?>";
     var jsonJobData;
     var xmlhttp = new XMLHttpRequest();
-    var url = `http://api.hel.fi/linkedevents/v1/place/?text=${phpCity}`;
+    var url = `http://api.hel.fi/linkedevents/v1/place/?division=${phpCity}`; // Palauttaa esikaupunki muuttujalla dataa
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
@@ -113,6 +113,7 @@ $stmt->close();
         trHeader.append(th1, th2, th3, th4, th5, th6);
         table.appendChild(trHeader);
 
+        //Täyttää pöydän json datalla
         var i;
         for (i = 0; i < Object.keys(jsonJobData.data).length; i++) {
             console.log(jsonJobData.data[i].info_url.fi);
@@ -144,19 +145,20 @@ $stmt->close();
         }
     }
 
+    // Luo pöydän ja täyttää sen API kutsusta tulleilla tiedoilla.
     function getEventsViaText(){
         var suburb = document.getElementById('searchArea').value;
         console.log(`http://api.hel.fi/linkedevents/v1/place/?division=${suburb}`);
 
-        fetch(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`)
-            .then(function(resp) { return resp.json() }) // Convert data to json
+        fetch(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`) // palauttaa millä tahansa muuttujalla dataa, joka täsmää johonkin nimeen API:ssa.
+            .then(function(resp) { return resp.json() })
             .then(function(data) {
                 console.log(suburb);
                 console.log(data);
                 jsonEvents = data;
             })
             .catch(function() {
-                // catch any errors
+
             });
 
         document.getElementById('eventsTable2').innerHTML = "";
@@ -177,6 +179,7 @@ $stmt->close();
         trHeader.append(th1, th2, th3, th4, th5, th6);
         table.appendChild(trHeader);
 
+        // täyttää pöydän saadulla json datalla
         var i;
         for (i = 0; i < Object.keys(jsonEvents.data).length; i++) {
             console.log(jsonEvents.data[i].info_url.fi);
@@ -209,6 +212,7 @@ $stmt->close();
 
     }
 
+    // lähettaa datan php:lle kun käyttäjä on painanut favorite buttonia. Php vie datan tietokantaan
     function getData(x) {
         alert('Details: ' + x.parentNode.parentNode.childNodes[0].innerHTML + ", " +x.parentNode.parentNode.childNodes[4].innerHTML +", "+x.parentNode.parentNode.childNodes[5].innerHTML + " added to favourites.");
         var favorite = x.parentNode.parentNode.childNodes[0].innerHTML + ", " +x.parentNode.parentNode.childNodes[4].innerHTML +", url:"+x.parentNode.parentNode.childNodes[5].innerHTML;
