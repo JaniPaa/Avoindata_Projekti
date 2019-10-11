@@ -63,13 +63,13 @@ $stmt->close();
 </nav>
 <div class="home-content">
     <h2>Home Pae</h2>
-    <p>You can search events happening inside Helsinki with your home Helsinki suburb by pressing "Get events with home suburb" button,
+    <p>You can search events happening inside Helsinki with your home Helsinki suburb by pressing "Get events with home division" button,
         <br> or by inserting one into the search text field and clicking magnifying glass icon. Alternatively you can search events with keywords like "koulu" or "taide".<br>
         This may take few clicks!
 </div>
 <div id="getEvents">
     <table id="eventsTable"></table>
-    <button onclick="createEventTable(jsonJobData)" id="suburbEventBtn">Get events with home suburb</button>
+    <button onclick="createEventTable(jsonJobData)" id="suburbEventBtn">Get events with home division</button>
     <form>
         <input type="text" name="username" placeholder="Search" id="suburbTextArea" required>
     </form>
@@ -145,10 +145,10 @@ $stmt->close();
         }
     }
 
-    // Luo pöydän ja täyttää sen API kutsusta tulleilla tiedoilla.
+    // Haetaan APi kutsulla tietoa tapahtumista millä tahansa teksti parametrilla.
     function getEventsViaText(){
         var suburb = document.getElementById('searchArea').value;
-        console.log(`http://api.hel.fi/linkedevents/v1/place/?division=${suburb}`);
+        console.log(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`);
 
         fetch(`http://api.hel.fi/linkedevents/v1/place/?text=${suburb}`) // palauttaa millä tahansa muuttujalla dataa, joka täsmää johonkin nimeen API:ssa.
             .then(function(resp) { return resp.json() })
@@ -212,11 +212,14 @@ $stmt->close();
 
     }
 
-    // lähettaa datan php:lle kun käyttäjä on painanut favorite buttonia. Php vie datan tietokantaan
+    // lähettaa datan profile.php:lle kun käyttäjä on painanut favorite buttonia.
     function getData(x) {
-        alert('Details: ' + x.parentNode.parentNode.childNodes[0].innerHTML + ", " +x.parentNode.parentNode.childNodes[4].innerHTML +", "+x.parentNode.parentNode.childNodes[5].innerHTML + " added to favourites.");
-        var favorite = x.parentNode.parentNode.childNodes[0].innerHTML + ", " +x.parentNode.parentNode.childNodes[4].innerHTML +", url:"+x.parentNode.parentNode.childNodes[5].innerHTML;
-        window.location.href = "profile.php?favorite=" + favorite;
+        alert('Details: ' + x.parentNode.parentNode.childNodes[4].innerHTML);
+        var name = x.parentNode.parentNode.childNodes[0].innerHTML;
+        var email = x.parentNode.parentNode.childNodes[3].innerHTML;
+        var address = x.parentNode.parentNode.childNodes[4].innerHTML;
+        var phonenumber = x.parentNode.parentNode.childNodes[1].innerHTML;
+        window.location.href = "profile.php?name="+name+"&email="+email+"&phonenumber="+phonenumber+"&address="+address;
     }
 </script>
 

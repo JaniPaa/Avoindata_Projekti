@@ -41,7 +41,7 @@ if ($password1 != $password2) {
     echo 'alert("The two passwords do not match")';
     echo '</script>';
 }
-
+// haetaan asetetun käyttäjä nimen perusteella tietokannasta tietoa.
 $user_check_query = "SELECT * FROM userstable WHERE username='$username'";
 $result = mysqli_query($con, $user_check_query);
 $user = mysqli_fetch_assoc($result);
@@ -55,7 +55,8 @@ if ($user) {
         echo '</script>';
     }
 }
-    if (count($errors) == 0) { //jos ei löydy virheitä niin lähetetään tietokantaan käyttäjän data.
+//jos ei löydy virheitä niin lähetetään tietokantaan käyttäjän data.
+    if (count($errors) == 0) {
         $query = "INSERT INTO userstable (username, password, city, favorite) 
   			  VALUES('$username', '$password1', '$city', '$favorite')";
         mysqli_query($con, $query);
@@ -77,7 +78,7 @@ if ($user) {
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Eventtinaattori</a>
+            <a class="navbar-brand" href="#">Grand Tourism-o</a>
         </div>
         <ul class="nav navbar-nav"></ul>
         <ul class="nav navbar-nav navbar-right">
@@ -93,8 +94,8 @@ if ($user) {
     <input type="password" name="password1" placeholder="Password" id="password" required><br>
     <label for="password2"class="registerLabel">Repeat password:</label><br>
     <input type="password" name="password2" placeholder="Repeat password" id="password2" required><br>
-    <label for="city"class="registerLabel">Your home Helsinki suburb:</label><br>
-    <input type="text" name="city" placeholder="Suburb" id="city" ><br>
+    <label for="city"class="registerLabel">Your home Helsinki division:<br>Optional</label><br>
+    <input type="text" name="city" placeholder="Division" id="city" ><br>
     <input type="submit" value="Register" name="registerUser" id="submitBtn">
 </form>
 </body>
