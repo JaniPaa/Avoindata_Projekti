@@ -8,7 +8,6 @@
 
 session_start();
 
-// kommentoi alla oleva if lause pois jos haluat avata selaimeen suoraan tämän sivun.
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html'); // jos käyttäjä ei ole kirjautunut, hänet ohjataan kirjautumissivulle.
 	exit();
@@ -69,7 +68,7 @@ $stmt->close();
 </div>
 <div id="getEvents">
     <table id="eventsTable"></table>
-    <button onclick="createEventTable(jsonJobData)" id="suburbEventBtn">Get events with home division</button>
+    <button onclick="createEventTable(jsonEventData)" id="suburbEventBtn">Get events with home division</button>
     <form>
         <input type="text" name="username" placeholder="Search" id="suburbTextArea" required>
     </form>
@@ -80,20 +79,20 @@ $stmt->close();
 <script>
     var jsonEvents;
     var phpCity = "<?=$city?>";
-    var jsonJobData;
+    var jsonEventData;
     var xmlhttp = new XMLHttpRequest();
     var url = `http://api.hel.fi/linkedevents/v1/place/?division=${phpCity}`; // Palauttaa esikaupunki muuttujalla dataa
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            jsonJobData = JSON.parse(xmlhttp.responseText);
-            console.log(jsonJobData);
+            jsonEventData = JSON.parse(xmlhttp.responseText);
+            console.log(jsonEventData);
         }
     };
     xmlhttp.open('GET', url, true); // 4
     xmlhttp.send();
 
-    function createEventTable(jsonJobData){
+    function createEventTable(jsonEventData){
         document.getElementById('eventsTable').innerHTML = "";
         var table = document.getElementById('eventsTable').createCaption();
         table.innerHTML = "Searched with: "+ phpCity;
@@ -115,29 +114,29 @@ $stmt->close();
 
         //Täyttää pöydän json datalla
         var i;
-        for (i = 0; i < Object.keys(jsonJobData.data).length; i++) {
-            console.log(jsonJobData.data[i].info_url.fi);
+        for (i = 0; i < Object.keys(jsonEventData.data).length; i++) {
+            console.log(jsonEventData.data[i].info_url.fi);
             var tr = document.createElement('tr');
             var td = document.createElement('td');
-            td.innerHTML = jsonJobData.data[i].name.fi;
+            td.innerHTML = jsonEventData.data[i].name.fi;
             var td2 = document.createElement('td');
-            td2.innerHTML = jsonJobData.data[i].telephone.fi;
+            td2.innerHTML = jsonEventData.data[i].telephone.fi;
             var td3 = document.createElement('td');
-            if(jsonJobData.data[i].description != null){
-                td3.innerHTML = jsonJobData.data[i].description.fi;
+            if(jsonEventData.data[i].description != null){
+                td3.innerHTML = jsonEventData.data[i].description.fi;
             }else{
                 td3.innerHTML = "No information available.";
             }
             var td4 = document.createElement('td');
-            if(jsonJobData.data[i].email != null){
-                td4.innerHTML = jsonJobData.data[i].email;
+            if(jsonEventData.data[i].email != null){
+                td4.innerHTML = jsonEventData.data[i].email;
             }else{
                 td4.innerHTML = "No information available.";
             }
             var td5 = document.createElement('td');
-            td5.innerHTML = jsonJobData.data[i].street_address.fi;
+            td5.innerHTML = jsonEventData.data[i].street_address.fi;
             var td6 = document.createElement('td');
-            td6.innerHTML = '<a href="'+jsonJobData.data[i].info_url.fi+'">'+jsonJobData.data[i].info_url.fi+'</a>';
+            td6.innerHTML = '<a href="'+jsonEventData.data[i].info_url.fi+'">'+jsonEventData.data[i].info_url.fi+'</a>';
             var tdBtn1 = document.createElement('td');
             tdBtn1.innerHTML = `<input type="button" style="color:black" onclick="getData(this)" value="Add to favourite"</input>`;
             tr.append(td, td2, td3, td4, td5, td6, tdBtn1);
@@ -214,7 +213,7 @@ $stmt->close();
 
     // lähettaa datan profile.php:lle kun käyttäjä on painanut favorite buttonia.
     function getData(x) {
-        alert('Details: ' + x.parentNode.parentNode.childNodes[4].innerHTML);
+        alert(x.parentNode.parentNode.childNodes[0].innerHTML + " is added to your favorites.");
         var name = x.parentNode.parentNode.childNodes[0].innerHTML;
         var email = x.parentNode.parentNode.childNodes[3].innerHTML;
         var address = x.parentNode.parentNode.childNodes[4].innerHTML;

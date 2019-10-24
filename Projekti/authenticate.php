@@ -21,7 +21,7 @@ if ( mysqli_connect_errno() ) {
 }
 
 if ( !isset($_POST['username'], $_POST['password']) ) {
-    die ('Täytäthän username ja password kentät!');
+    die ('Please fill username and password fields!');
 }
 
 // Haetaan käyttäjän usernamella hänen id ja salasana.

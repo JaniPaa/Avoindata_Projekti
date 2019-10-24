@@ -8,7 +8,6 @@
 
 session_start();
 
-// kommentoi alla oleva if lause pois jos haluat avata selaimeen suoraan tämän sivun.
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html'); // Jos käyttäjä ei ole kirjautunut sisään. Hänet heitetään takaisin kirjautumissivulle.
     exit();
@@ -50,7 +49,6 @@ if (isset($_POST['changeDetails'])) {
         mysqli_query($con, $query);
         echo "<script>alert('Change successful!'); window.location.href='profile.php';</script>";
     }
-
 }
 // Käyttäjän favorite paikan tiedot lähetetään relaatiotietokannan favorites tauluun, kun hän on painanut "Add to favorites" nappia kotisivulla.
 if (isset($_GET['name'])) {
@@ -61,8 +59,6 @@ if (isset($_GET['name'])) {
     $id = $_SESSION['id'];
     $querySetFavorite = "INSERT INTO favorites (name, user_id, email, phonenumber, address) VALUES ('$name', '$id','$email', '$phonenumber', '$address') ";
     mysqli_query($con, $querySetFavorite);
-
-
 }
 // Jos käyttäjä painaa "Show favorites" buttonia niin käyttäjän favoritet haetaan tietokannasta ja ne laitetaan muuttujaan "obj".
 if (isset($_GET['getFavorites'])) {
@@ -139,7 +135,7 @@ if (isset($_GET['getFavorites'])) {
     console.log(Object.keys(obj).length);
 
     var table = document.getElementById('favTable').createCaption();
-    table.innerHTML = "Your favorites";
+    table.innerHTML = "Your favorites:";
     var trHeader = document.createElement('tr');
     var th1 = document.createElement('th');
     th1.innerHTML = 'Name';

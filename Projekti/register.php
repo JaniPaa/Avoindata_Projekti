@@ -14,7 +14,7 @@ $con = mysqli_connect('localhost', 'root', 'password', 'testidatabase');
 if ( mysqli_connect_errno() ) {
     die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-
+// Kun käyttäjä on painanut rekisteröinti nappia.
 if (isset($_POST['registerUser'])) {
 // Formeista haetut käyttäjä datat.
 $username = mysqli_real_escape_string($con, $_POST['username']);
@@ -64,7 +64,6 @@ if ($user) {
         echo "<script>alert('Registration successful!'); window.location.href='index.html';</script>";
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html>
